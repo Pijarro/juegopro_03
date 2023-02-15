@@ -1,14 +1,30 @@
+function cambia_emoji () {
+    icono = randint(0, 9)
+    emojis[icono].showImage(0)
+    basic.pause(200)
+}
 input.onButtonPressed(Button.A, function () {
-    basic.showIcon(IconNames.Heart)
-    basic.pause(200)
-    basic.showIcon(IconNames.Yes)
-    basic.pause(200)
-    basic.showIcon(IconNames.Skull)
-    basic.pause(200)
-    basic.showIcon(IconNames.No)
-    basic.pause(200)
-    basic.showIcon(IconNames.Angry)
+    if (icono == 3) {
+    	
+    }
 })
-basic.forever(function () {
+input.onButtonPressed(Button.B, function () {
 	
+})
+let icono = 0
+let emojis: Image[] = []
+emojis = [
+images.iconImage(IconNames.Heart),
+images.iconImage(IconNames.Yes),
+images.iconImage(IconNames.Skull),
+images.iconImage(IconNames.No),
+images.iconImage(IconNames.Angry),
+images.iconImage(IconNames.Ghost),
+images.iconImage(IconNames.TShirt),
+images.iconImage(IconNames.Scissors),
+images.iconImage(IconNames.Giraffe),
+images.iconImage(IconNames.Pitchfork)
+]
+basic.forever(function () {
+    cambia_emoji()
 })
